@@ -1,0 +1,13 @@
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0px -10px;
+}
