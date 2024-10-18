@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"
+style="margin: -10px;">
+  <head>
+    <title>Contact form</title>
+    <link rel="stylesheet" href="Body.css">
+  </head>
+  <!-- BODY -->
+  <body>
+    <script src="../Contact form/js/form.js"></script>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div>
+        <ul><a href="../index.html" style="text-decoration: none;">
+          Home
+        </a>
+        </ul>
+      </div>
+      <div>
+        <ul> <a href="../Blog/blog.html" style="text-decoration: none;">
+          Blog
+        </a>
+        </ul>
+      </div>
+      <div class="btnsubmitstyle">
+        <a href="../Contact form/Contact form.html"> 
+          <button class="btncontact">Contact me</button>
+        </a>
+      </div>
+    </nav>
+    <!-- FORM -->
+    <form onsubmit="Mailing(event)">
+      <div style="background-color: #e0e0e0;" class="body">
+        <h1 style="font-weight: bold;">
+          GET IN TOUCH
+        </h1>        
+          <label 
+          class="label" 
+            for="Name">
+              Name
+            <input
+            class="input" id="Name" 
+            type="text" />
+          </label>
+          <label 
+          class="label" 
+            for="Email">
+             Email
+            <input
+             class="input" id="Email"  
+            type="text" />
+          </label>
+          <label 
+          class="label" 
+            for="Phone">
+              Phone Number
+            <input 
+            class="input" id="Phone" 
+            type="text" />
+          </label>
+      <div>
+        <!-- Label input -->
+          <div style=
+          "display: flex;
+          flex-direction: column;">
+            <label for="Subject">
+              Subject
+            </label>
+              <select class="select" id="Subject">
+                <option>
+                </option>
+                <option>
+                  Frontend
+                </option>
+                <option>
+                  Backend
+                </option>
+                <option>
+                  Fullstack
+                </option>
+                <option>
+                  DevOps             
+                </option>
+              </select>
+              <!-- TEXT AREA -->
+              <div class="label">
+                <label for="Message">Your message please!</label>
+              <textarea id="Message" class="input"  style=" height: 100px; resize: none;"></textarea>
+              <div class="btnsubmit">
+                  <button style="border: none;
+                  border-radius: 15px;
+                  background-color: black;
+                  color: white;">
+                    SUBMIT
+                  </button>
+      </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
