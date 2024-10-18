@@ -1,49 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+style="margin: -10px;">
   <head>
     <title>Contact form</title>
     <link rel="stylesheet" href="Body.css">
-    <script src="../js/latihan.js"></script>
   </head>
   <!-- BODY -->
   <body>
+    <script src="../Contact form/js/form.js"></script>
     <!-- NAVBAR -->
-    <nav style=" 
-    background-color: #f3f3f3;
-   "
-    >
-        <ul class="ul"
-        >
-            <li><a href="">
-              Home
-            </a>
-            </li>
-            <li><a href="">
-              Blog             
-            </a>
-            </li>  
-            <li style="
-            display: flex;
-            justify-content: flex-end;
-            width: 80%;
-            "
-            >
-            <button style="
-            display: flex;
-            justify-content: flex-end;
-            margin: 10px -50px;
-            background-color: black;
-            color: white;
-            border-radius: 5px;
-            padding: 3px 10px;"
-            >
-            Contact me
-          </button>
-        </li>
+    <nav class="navbar">
+      <div>
+        <ul><a href="../index/index.html" style="text-decoration: none;">
+          Home
+        </a>
         </ul>
+      </div>
+      <div>
+        <ul> <a href="../Blog/blog.html" style="text-decoration: none;">
+          Blog
+        </a>
+        </ul>
+      </div>
+      <div class="btnsubmitstyle">
+        <a href="../Contact form/Contact form.html"> 
+          <button class="btncontact">Contact me</button>
+        </a>
+      </div>
     </nav>
     <!-- FORM -->
-    <form onsubmit="(event)">
+    <form onsubmit="Mailing(event)">
       <div style="background-color: #e0e0e0;" class="body">
         <h1 style="font-weight: bold;">
           GET IN TOUCH
@@ -52,15 +38,14 @@
           class="label" 
             for="Name">
               Name
-            <input 
-            class="input" 
-            id="Name" 
+            <input
+            class="input" id="Name" 
             type="text" />
           </label>
           <label 
           class="label" 
             for="Email">
-            Email
+             Email
             <input
              class="input" id="Email"  
             type="text" />
@@ -68,10 +53,9 @@
           <label 
           class="label" 
             for="Phone">
-            Phone Number
+              Phone Number
             <input 
-            class="input"
-            id="Phone" 
+            class="input" id="Phone" 
             type="text" />
           </label>
       <div>
@@ -82,33 +66,26 @@
             <label for="Subject">
               Subject
             </label>
-              <select class="select"
-              id="Subject">
-              <option value="">
-
-              </option>
-                <option value="">
+              <select class="select" id="Subject">
+                <option>
+                </option>
+                <option>
                   Frontend
                 </option>
-                <option value="">
+                <option>
                   Backend
                 </option>
-                <option value="">
+                <option>
                   Fullstack
                 </option>
-                <option value="">
+                <option>
                   DevOps             
                 </option>
               </select>
               <!-- TEXT AREA -->
               <div class="label">
-                <label for="msg">Your message please!</label>
-              <textarea 
-              style="resize: none;
-              height: 100px;"
-              class="input" 
-              id="msg"> 
-              </textarea>
+                <label for="Message">Your message please!</label>
+              <textarea id="Message" class="input"  style=" height: 100px; resize: none;"></textarea>
               <div class="btnsubmit">
                   <button style="border: none;
                   border-radius: 15px;

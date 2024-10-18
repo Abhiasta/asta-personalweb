@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"
+style="margin: -10px -10px;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog css/blog.css" />
+    <link rel="stylesheet" href="blog css/blogsubmit.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <body>
+    <div>
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <div>
+          <ul><a href="../index/index.html" style="text-decoration: none;">
+            Home
+          </a>
+          </ul>
+        </div>
+        <div>
+          <ul> <a href="../Blog/blog.html" style="text-decoration: none;">
+            Blog
+          </a>
+          </ul>
+        </div>
+        <div class="btnsubmitstyle">
+          <a href="../Contact form/Contact form.html">
+            <button class="btnsubmit">Contact me</button>
+          </a>
+        </div>
+      </nav>
+      <!-- BODY -->
+      <div class="body">
+        <form onsubmit="addblog(event)">
+        <h1>ADD MY PROJECT</h1>
+          <label for="project-name" class="label">Project Name
+        <input id="project-name" class="input" />
+          </label>
+        <!-- STARTEND -->
+        <div class="body-start-end">
+          <label class="label-startend">Start Date
+            <input class="input"/></label>
+          <label class="label-startend">End Date
+            <input class="input"/></label>
+        </div>
+        <label for="desc" class="label">Description
+          <textarea id="desc" class="txtdesc"></textarea>
+        </label>
+        <div>
+          <label class="label">Technologies</label>
+          <!-- CHECKBOX -->
+          <div class="checkbox">
+            <label class="lbl-checkbox"
+            >Node JS<input class="input-checkbox" type="checkbox" 
+            /></label>
+            <label class="lbl-checkbox"
+            >React JS<input class="input-checkbox" type="checkbox" 
+            /></label>
+          </div>
+            <div class="checkbox">
+              <label class="lbl-checkbox"
+              >Next JS<input class="input-checkbox" type="checkbox" 
+              /></label>
+              <label class="lbl-checkbox"
+              >TypeScript<input class="input-checkbox" type="checkbox" 
+              /></label>
+          </div>
+        </div>
+        <!-- UPLOAD IMAGE -->
+        <label class="label">Upload Image
+          <div class="div-file">
+            <p class="pfile" >Attach file</p>
+              <div class="attachfile">
+                <i class="fa-solid fa-paperclip"></i>
+              </div>
+            <input id="blogimage" hidden type="file" /></label>
+          </div>
+        <div class="divbtn">
+          <button class="btndown" >Submit</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <script src="../Blog/Blog js/Blog.js"></script>
+  </body>
+  <div>
+    <h1 class="myproject">MY PROJECT</h1>
+    <hr class="line" />
+    <div id="content" class="bloglist">
+      <!-- dynamic content would be here -->
+          <div class="blog-image">
+            <img src="${blogs[index].image}" alt="" />
+          </div>
+          <div class="blog-content">
+            <div class="btn-group">
+              <button class="btn-edit">Edit Post</button>
+              <button class="btn-post">Delete Post</button>
+            </div>
+            <h1>
+              <a href="blog-detail.html" target="_blank"
+                ></a
+              >
+            </h1>
+            <div class="detail-blog-content">
+                
+            </div>
+            <p>
+              
+            </p>
+            <p>
+                
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</html>
