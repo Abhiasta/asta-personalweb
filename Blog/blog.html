@@ -5,8 +5,8 @@ style="margin: -10px -10px;">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="blog css/blog.css" />
-    <link rel="stylesheet" href="blog css/blogsubmit.css">
+    <link rel="stylesheet" href="./blog-css/blog.css" />
+    <!-- <link rel="stylesheet" href="./blog-css/blogsubmit.css"> -->
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   </head>
@@ -27,7 +27,7 @@ style="margin: -10px -10px;">
           </ul>
         </div>
         <div class="btnsubmitstyle">
-          <a href="../Contact form/Contact form.html">
+          <a href="../contact-form/contact-form.html">
             <button class="btnsubmit">Contact me</button>
           </a>
         </div>
@@ -84,39 +84,41 @@ style="margin: -10px -10px;">
         </form>
       </div>
     </div>
-    <script src="../Blog/Blog js/Blog.js"></script>
+    <script src="../Blog/blog-js/blog.js"></script>
   </body>
-  <div>
+  <div style="background-color: antiquewhite;
+  margin-bottom: -20px;">
+  <hr>
     <h1 class="myproject">MY PROJECT</h1>
-    <hr class="line" />
     <div id="content" class="bloglist">
       <!-- dynamic content would be here -->
-          <div class="blog-image">
-            <img src="${blogs[index].image}" alt="" />
+          <!-- <div>
+            <img class="blog-image" src="../assets/image/foto.jpeg" />
           </div>
           <div class="blog-content">
-            <div class="btn-group">
-              <button class="btn-edit">Edit Post</button>
-              <button class="btn-post">Delete Post</button>
-            </div>
-            <h1>
+            <h1 class="blogtitle">
               <a href="blog-detail.html" target="_blank"
-                ></a
-              >
+              >JUDUL</a>
             </h1>
             <div class="detail-blog-content">
-                
+              <div class="author">12 Jul 2021 22:30 WIB | Abhiasta Gustyanugra</div>
             </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+              voluptate quasi. Perferendis, nobis reiciendis cupiditate assumenda
+              aliquam dolor veniam voluptas porro eaque quis nostrum nihil, laborum
+              tenetur, sunt consectetur ratione.
+            </p>
             <p>
               
             </p>
-            <p>
-                
-            </p>
+            <div class="btn-group">
+              <button class="btnedit">Edit Post</button>
+              <button class="btndelete">Delete Post</button>
+            </div> -->
           </div>
         </div>
       </div>
-      
     </div>
   </div>
 </html>

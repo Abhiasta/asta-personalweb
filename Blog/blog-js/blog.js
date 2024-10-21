@@ -23,34 +23,33 @@ function addblog(event) {
     let html = "";
 
     for (let index = 0; index < blogs.lengt; index++) {
-      html += `<div class="blog-list-item">
-          <div class="blog-image">
-            <img src="${blogs[index].image}" alt="" />
+      html += `<div>
+            <img class="blog-image" src="${blogs[index].image}" />
           </div>
           <div class="blog-content">
-            <div class="btn-group">
-              <button class="btn-edit">Edit Post</button>
-              <button class="btn-post" onclick="deleteBlog(${index})">Delete Post</button>
-            </div>
-            <h1>
+            <h1 class="blogtitle">
               <a href="blog-detail.html" target="_blank"
-                >${blogs[index].title}</a
-              >
+              >${blogs[index].title}</a>
             </h1>
             <div class="detail-blog-content">
-                ${getFullTime(blogs[index].createdAt)} | Ichsan Emrald Alamsyah
+              <div class="author">12 Jul 2021 22:30 WIB | Abhiasta Gustyanugra</div>
             </div>
             <p>
-              ${blogs[index].content}
+            ${blogs[index].description}
             </p>
             <p>
-                ${getDistanceTime(blogs[index].createdAt)}
+              
             </p>
-          </div>
-        </div>`;
+            <div class="btn-group">
+              <button class="btnedit">Edit Post</button>
+              <button class="btndelete">Delete Post</button>
+            </div>`;
     }
     document.getElementById("content").innerHTML = html;
   }
-
+  // /* <img src="${blogs[index].image}" alt="" /> */
+  // >${blogs[index].title}</a
+  // ${getFullTime(blogs[index].createdAt)}
+  // ${blogs[index].content}
   console.log(blogs);
 }
