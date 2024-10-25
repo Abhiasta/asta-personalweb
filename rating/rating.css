@@ -31,7 +31,8 @@
 }
 
 .starButton {
-  background-color: black;
+  border: none;
+  background-color: white;
 }
 
 .stars {
