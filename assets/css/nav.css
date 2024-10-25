@@ -1,0 +1,98 @@
+.navbar {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+.btnsubmitstyle {
+  margin: 0px 20px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btnsubmit {
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+}
+
+.divmenu {
+  margin: 10px;
+  display: none;
+}
+
+.menu {
+  border: none;
+}
+
+.ul {
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0px -10px;
+}
+
+.divhamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2afaf9a;
+}
+
+.hide {
+  display: none;
+}
+
+.hambActive,
+.colorActive {
+  background-color: orangered;
+  color: white;
+}
+
+.hamburger {
+  font-size: 40px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: ridge;
+  width: 100%;
+}
+
+.hambRef {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 620px) {
+  .bodymobile {
+    margin: 10px;
+  }
+  .divmenu {
+    display: flex;
+    width: -100%;
+  }
+
+  .btnsubmitstyle {
+    width: 100%;
+  }
+
+  .btnsubmit,
+  .navmenu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .divhamburger {
+    display: none;
+  }
+}

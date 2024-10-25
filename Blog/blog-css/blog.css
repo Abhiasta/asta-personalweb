@@ -134,6 +134,10 @@
   align-items: center;
 }
 
+.divcontent {
+  display: flex;
+}
+
 .bloglist {
   box-shadow: 5px 5px 10px gray;
   margin: 20px;

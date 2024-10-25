@@ -3,23 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
+   <link rel="stylesheet" href="./assets/css/nav.css">
   </head>
   <body>
     <!-- body -->
     <nav class="navbar">
       <div>
-        <ul>
+        <ul class="navmenu">
           <a href="./index.html" style="text-decoration: none"> Home </a>
         </ul>
       </div>
       <div>
-        <ul>
+        <ul class="navmenu" >
           <a href="./blog/blog.html" style="text-decoration: none"> Blog </a>
         </ul>
       </div>
@@ -27,10 +28,34 @@
         <a href="./contact-form/contact-form.html">
           <button class="btnsubmit">Contact me</button>
         </a>
+        <div class="divmenu">
+            <button onclick="menutoggle()" class="menu">
+              <i style="font-size: 20px" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
       </div>
     </nav>
+    <div id="menu" class="hide divhamburger">
+      <div class="hamburger hambActive">
+          <a href="" class="hambRef colorActive" >
+          Home
+        </div>
+      </a>
+      <div class="hamburger">
+        <a href="" class="hambRef">
+          Blog
+        </a>
+      </div>
+      <div class="hamburger">
+        <a href="" class="hambRef">
+          Contact me
+        </a>
+      </div>
+    </div>
+    <!-- BODY -->
     <div class="body">
       <div
+        class="bodymobile"
         style="
           display: flex;
           flex-direction: column;
@@ -114,4 +139,5 @@
       </div>
     </div>
   </body>
+  <script src="./assets/js/nav.js" ></script>
 </html>
