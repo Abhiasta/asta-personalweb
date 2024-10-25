@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.starButton {
+  background-color: black;
+}
+
 .stars {
   display: flex;
   justify-content: center;
