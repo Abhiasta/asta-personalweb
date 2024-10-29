@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="en"
-style="margin: -10px;">
+style="margin: -10px;
+background-color: #e0e0e0;">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact form</title>
     <link rel="stylesheet" href="Body.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="../assets/js/nav.js" ></script>
   </head>
   <!-- BODY -->
   <body>
-    <script src="../Contact form/js/form.js"></script>
+    <script src="../contact-form/js/form.js"></script>
     <!-- NAVBAR -->
     <nav class="navbar">
       <div>
-        <ul><a href="../index/index.html" style="text-decoration: none;">
-          Home
-        </a>
+        <ul class="navmenu">
+          <a href="../index.html" style="text-decoration: none"> Home </a>
         </ul>
       </div>
       <div>
-        <ul> <a href="../Blog/blog.html" style="text-decoration: none;">
-          Blog
-        </a>
+        <ul class="navmenu" >
+          <a href="../blog/blog.html" style="text-decoration: none"> Blog </a>
+        </ul>
+      </div>
+      <div>
+        <ul class="navmenu" >
+          <a href="../rating/rating.html" style="text-decoration: none"> Testimonial </a>
         </ul>
       </div>
       <div class="btnsubmitstyle">
-        <a href="../Contact form/Contact form.html"> 
-          <button class="btncontact">Contact me</button>
+        <a href="./contact-form.html">
+          <button class="btnsubmit">Contact me</button>
         </a>
+        <div class="divmenu">
+            <button onclick="menutoggle()" class="menu">
+              <i style="font-size: 20px" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
       </div>
     </nav>
+    <div id="menu" class="hide divhamburger">
+      <div class="hamburger hambActive">
+          <a href="" class="hambRef colorActive" >
+          Home
+        </div>
+      </a>
+      <div class="hamburger">
+        <a href="" class="hambRef">
+          Blog
+        </a>
+      </div>
+      <div class="hamburger">
+        <a href="" class="hambRef">
+          Contact me
+        </a>
+      </div>
+    </div>
     <!-- FORM -->
     <form onsubmit="Mailing(event)">
       <div style="background-color: #e0e0e0;" class="body">
@@ -86,7 +119,7 @@ style="margin: -10px;">
               <div class="label">
                 <label for="Message">Your message please!</label>
               <textarea id="Message" class="input"  style=" height: 100px; resize: none;"></textarea>
-              <div class="btnsubmit">
+              <div class="buttonsubmit">
                   <button style="border: none;
                   border-radius: 15px;
                   background-color: black;

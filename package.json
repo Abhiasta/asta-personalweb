@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.21.1",
+    "hbs": "^4.2.0"
+  },
+  "name": "abhi-nitip",
+  "version": "1.0.0",
+  "description": "abhi personal web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal-web"
+  ],
+  "author": "abhiasta",
+  "license": "ISC"
+}

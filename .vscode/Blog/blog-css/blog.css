@@ -131,4 +131,61 @@
 .myproject {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.divcontent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bloglist {
+  box-shadow: 5px 5px 10px gray;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: white;
+  width: 25%;
+  border-style: outset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-image {
+  margin: 10px;
+  width: 200px;
+  border-radius: 20px;
+  height: 200px;
+}
+
+.btn-group {
+  display: flex;
+  margin: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnedit {
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  padding: 3px 10px;
+}
+
+.btndelete {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: orangered;
+  padding: 3px 10px;
+}
+
+.blog-content {
+  margin: 10px;
+}
+
+.blogtitle {
+  display: flex;
+  justify-content: center;
 }

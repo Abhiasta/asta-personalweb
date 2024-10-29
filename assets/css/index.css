@@ -1,0 +1,69 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e7eb;
+}
+.borderCard {
+  margin-top: 30px;
+  width: 1000px !important;
+  box-shadow: 0px 5px 10px gray;
+}
+
+.img-body {
+  box-shadow: 0px 0px 30px gray;
+}
+
+.author {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cardBody {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.card-body {
+  text-align: justify;
+  margin: 20px;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card-btn {
+  align-items: baseline;
+  gap: 20px;
+  display: flex;
+}
+
+.btn-contact {
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: black;
+}
+
+.card-cv {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-icon {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 40px;
+  gap: 20px;
+  font-size: 30px;
+}
+
+.cardProject {
+  margin: 50px;
+}
