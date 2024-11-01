@@ -61,10 +61,10 @@ style="margin: -10px -10px;">
       </div>
       <!-- BODY -->
       <div class="body">
-        <form onsubmit="addblog(event)">
+        <form method="post" action="/blog">
         <h1>ADD MY PROJECT</h1>
           <label for="project-name" class="label">Project Name
-        <input id="project-name" class="input" />
+        <input id="project-name" name="projectTitle" class="input" />
           </label>
         <!-- STARTEND -->
         <div class="body-start-end">
@@ -74,7 +74,7 @@ style="margin: -10px -10px;">
             <input class="input"/></label>
         </div>
         <label for="desc" class="label">Description
-          <textarea id="desc" class="txtdesc"></textarea>
+          <textarea id="desc" name="projectDesc" class="txtdesc"></textarea>
         </label>
         <div>
           <label class="label">Technologies</label>

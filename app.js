@@ -1,45 +1,101 @@
 const express = require("express");
+const { console } = require("inspector");
 const app = express();
 const port = 1515;
+const path = require("path");
+const config = require("./src/config/config.json");
+const { Sequelize, QueryTypes } = require("sequelize");
+const sequelize = new Sequelize(config.development);
 
 app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "./src/views"));
 
-app.use("/assets/css", express.static("assets/css"));
-app.use("/assets/js", express.static("assets/js"));
-app.use("/assets/image", express.static("assets/image"));
-app.use("/views", express.static("views"));
+app.use("/assets", express.static(path.join(__dirname, "./src/assets")));
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", home);
-app.get("/project", project);
-app.get("/testimonial", testimonial);
-app.get("/contact", contact);
-app.get("/project-detail/:id", blogDetail);
+app.get("/contactForm", contact);
+app.get("/blogDetail/:index", blogDetail);
+// app.get("/testimonial", testimonial);
 
-app.post("/add-project", projectPost);
+//Blog
+app.get("/blog", project);
+app.post("/blog", postProject);
+app.post("/postDelete/:index", deletePost);
+app.get("/blogEdit/:index", editPost);
+app.post("/blogEdit/:index", editBlogPost);
+
+const blogs = [];
+
 function home(req, res) {
   res.render("index");
 }
 
 function project(req, res) {
-  res.render("add-project");
+  const query = `SELECT * FROM users`;
+  const result = sequelize.query(query, { type: QueryTypes.SELECT });
+
+  console.log("data blogs:", result);
+
+  res.render("blog", { blogs });
 }
 
-function testimonial(req, res) {
-  res.render("testimonial");
-}
 function contact(req, res) {
-  res.render("contact");
+  res.render("contactForm");
 }
 
-function blogPost(req, res) {
-  const { title, content } = req.body;
+function blogDetail(req, res) {
+  const index = req.params.id;
 
-  console.log("Title : ", title);
-  console.log("Content : ", content);
+  res.render("blogDetail", { id: index });
+}
 
-  res.json(req.body);
+function postProject(req, res) {
+  const { projectName, projectDesc } = req.body;
+
+  blogs.unshift({
+    projectName,
+    projectDesc,
+    createdAt: new Date(),
+    image: "../assets/image/yeahBoi.png",
+  });
+
+  res.redirect("/blog");
+}
+
+function deletePost(req, res) {
+  const { index } = req.params;
+
+  blogs.splice(index, 1);
+
+  res.redirect("/blog");
+}
+
+// edit post
+
+function editPost(req, res) {
+  const { index } = req.params;
+
+  const blog = blogs.find((_, idx) => idx == index);
+
+  res.render("blogEdit", { blog, index });
+}
+
+function editBlogPost(req, res) {
+  const { index } = req.params;
+
+  const { projectName, projectDesc } = req.body;
+
+  blogs[index] = {
+    projectName,
+    projectDesc,
+    createdAt: new Date(),
+    image: "../assets/image/yeahBoi.png",
+  };
+
+  res.redirect("/blog");
 }
 
 app.listen(port, () => {
